@@ -9,6 +9,15 @@ import time
 from tools import log_tools
 from tools.file import pickle_objects, get_pickled_objects
 
+"""--Auto Shopper--
+    By Michael Fulcher
+
+    Send Donations (recommended $1.50USD) to -
+    PayPal: mjfulcher58@gmail.com
+    Bitcoin: 3EjKSBQka7rHaLqKMXKZ8t7sHDa546GWAd
+    Other options @ http://michaelfulcher.yolasite.com/
+"""
+
 obj_data_path = '.\\data\\shopping_list.pkl'
 products_list = list()
 class Price_and_location:
@@ -201,6 +210,8 @@ if __name__ == "__main__":
     log_tools.initialize(False)
     del time
     try:
+        print(
+            "Auto Shopper\n\tBy Michael Fulcher\nSend Donations to - PayPal: mjfulcher58@gmail.com or Bitcoin: 3EjKSBQka7rHaLqKMXKZ8t7sHDa546GWAd -- Suggested Donation: $1.50USD\nOther donation options @ http://michaelfulcher.yolasite.com/\n\n")
         if path.isfile(obj_data_path):
             for i in get_pickled_objects(obj_data_path):
                 products_list.append(i)
